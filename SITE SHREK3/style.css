@@ -1,0 +1,250 @@
+:root {
+    --verde-shrek: #6ca12b;
+    --verde-escuro: #3e5c16;
+    --marrom-lama: #7e5a29;
+    --bege-pantano: #bfcea9;
+    --fundo: #97a874;
+    --a: hsl(126, 83%, 88%);
+}
+
+@font-face {
+    font-family: JLR Star Shrek;
+    src: url(./font/JLR\ Star\ Shrek.ttf);
+}
+
+body,
+p,
+ul,
+h2,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3%;
+    color: rgb(0, 0, 0);
+    background-color: var(--marrom-lama);
+    position: relative;
+    z-index: 2;
+}
+
+header img {
+    height: 70px;
+    width: 220px;    
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    font-size: 22px;
+    text-decoration: none;
+    color: var(--a);
+    background-color: var(--verde-shrek);
+    padding: 8px 16px;
+     border-radius: 50px;
+
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: var(--bege-pantano);
+    background-color: var(--verde-escuro);
+    padding: 8px 16px;
+
+}
+
+#inicio {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    background: none;
+
+}
+
+#inicio img {
+    max-width: 600px;
+    max-height: 400px;
+    width: 450px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 8px rgba(32, 88, 6, 0.5);
+    border: 1px solid var(--verde-escuro);
+}
+
+#inicio img:hover {
+    width: 550px;
+    height: 340px;
+    border: 2px dotted var(--verde-shrek);
+    box-shadow: 0 0 10px rgba(53, 50, 50, 0.5);
+    border-radius: 30px;
+}
+
+main img,
+#sinopse img,
+#producao img {
+    width: 300px;
+    height: 180px;
+    border-radius: 30px;
+}
+
+#sinopse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 50px;
+    margin: 20px;
+    gap: 20px;
+
+
+}
+
+#sinopse h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--marrom-lama);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    color: var(--bege-pantano);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#sinopse p {
+    text-align: justify;
+    color: var(--verde-escuro);
+    font-size: 18pt;
+    padding: 10px;
+
+
+}
+
+#sinopse img:hover {
+    width: 380px;
+    height: 240px;
+    border-radius: 30px;
+}
+
+
+#producao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    padding: 50px;
+    margin: 20px;
+    gap: 20px;
+
+}
+
+#producao h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--marrom-lama);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    color: var(--bege-pantano);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#producao p {
+    text-align: justify;
+    color: var(--verde-escuro);
+    font-size: 18pt;
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+#producao img:hover {
+    width: 380px;
+    height: 240px;
+    border-radius: 30px;
+}
+
+form {
+    color: var(--bege-pantano);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 45%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--marrom-lama);
+    border-radius: 18px;
+}
+form h2{
+    padding-bottom: 12px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type= "textarea"] {
+    width: 180px;
+    height: 24px;
+    font-size: 10pt;
+    border-radius: 6px;
+    border: 1px solid var(--verde-shrek);
+    padding: 4px 7px;
+    margin-bottom: 6px;
+}
+
+.avaliar {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    display: inline-flex;
+}
+
+.avaliar input[type="radio"] {
+    display: none;
+}
+
+.avaliar label {
+    font-size: 1.8rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.avaliar input[type="radio"]:checked~label {
+    color: var(--verde-shrek);
+}
+
+.avaliar label:hover,
+.avaliar label:hover~label {
+    color: var(--verde-escuro);
+}
+footer {
+    height: 60px;
+    background-color: var(--marrom-lama);
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--bege-pantano);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
